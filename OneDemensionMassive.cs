@@ -2,6 +2,25 @@
 {
     private int[] massive;
 
+
+    public OneDemensionMassive(int length1)
+    {
+        CreateMassive(length1);
+    }
+
+
+
+    public void CreateMassive(int length1)
+    {
+        massive = new int[length1];
+        var random = new Random();
+        for (int i = 0; i < massive.Length; i++)
+        {
+            massive[i] = random.Next(-200, 200);
+        }
+    }
+
+
     public override void CreateMassive()
     {
         Console.WriteLine("Array length");

@@ -2,6 +2,26 @@
 {
     private int[,] massive;
 
+    public TwoDemensionMassive(int length1, int length2)
+    {
+        CreateMassive(length1, length2);
+    }
+
+
+
+    public void CreateMassive(int length1, int length2)
+    {
+        massive = new int[length1, length2];
+        var random = new Random();
+        for (int i = 0; i < massive.GetLength(0); i++)
+        {
+            for (int j = 0; j < massive.GetLength(1); j++)
+            {
+                massive[i, j] = random.Next(-200, 200);
+            }
+        }
+    }
+
     public override void CreateMassive()
     {
         Console.WriteLine("Array length by string in format: len1 len2");

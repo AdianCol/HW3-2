@@ -5,4 +5,5 @@
     public abstract void AverageValue();
 
     public abstract void Print();
+
 }

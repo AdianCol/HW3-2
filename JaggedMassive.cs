@@ -2,6 +2,31 @@
 {
     private int[][] massive;
 
+
+    public JaggedMassive(int length1)
+    {
+        CreateMassive(length1);
+    }
+
+
+
+    public void CreateMassive(int length1)
+    {
+        massive = new int[length1][];
+        var random = new Random();
+        for (int i = 0; i < massive.GetLength(0); i++)
+        {
+            massive[i] = new int[random.Next(1, 10)];
+            for (int j = 0; j < massive[i].Length; j++)
+            {
+                massive[i][j] = random.Next(-200, 200);
+            }
+        }
+    }
+
+
+
+
     public override void CreateMassive()
     {
         Console.WriteLine("Array length");
